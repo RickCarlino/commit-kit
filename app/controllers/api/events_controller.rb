@@ -12,7 +12,6 @@ module Api
       render nothing: true if event.destroy
     end
 
-
 private
 
     def event

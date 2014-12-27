@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require angular
+//= require angular-resource
+//= require ng-rails-csrf
 //= require_tree .

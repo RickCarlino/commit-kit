@@ -11,11 +11,13 @@ gem 'jquery-rails'
 gem 'high_voltage', '~> 2.2.1'
 gem 'rails-assets-bootstrap'
 gem 'rails-assets-angular'
+gem 'rails-assets-angular-resource'
 
 # API STUFF ==================
 gem 'active_model_serializers'
 gem 'devise'
 gem 'mutations'
+gem 'ng-rails-csrf'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
