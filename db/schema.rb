@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20141227043108) do
   create_table "events", force: true do |t|
     t.integer  "tracker_id"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "events", ["tracker_id"], name: "index_events_on_tracker_id"
