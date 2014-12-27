@@ -26,12 +26,3 @@ app
   ($scope, tracker) ->
     $scope.trackers = tracker.query()
 ]
-$ ->
-  now = new Date()
-  cal = new CalHeatMap()
-  cal.init(
-    start: new Date(now.getFullYear(), 0, 1),
-    domain: "month",
-    subDomain: "x_day",
-    subDomainTextFormat: "%d",
-    data: "http://localhost:3000/api/trackers/1/events.json")
