@@ -15,6 +15,7 @@ gem 'rails-assets-angular'
 # API STUFF ==================
 gem 'active_model_serializers'
 gem 'devise'
+gem 'mutations'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

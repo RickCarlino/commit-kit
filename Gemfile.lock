@@ -69,6 +69,8 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.0)
     multi_json (1.10.1)
+    mutations (0.7.2)
+      activesupport
     orm_adapter (0.5.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -154,6 +156,7 @@ DEPENDENCIES
   factory_girl_rails
   high_voltage (~> 2.2.1)
   jquery-rails
+  mutations
   pry
   rails (~> 4.1.0)
   rails-assets-angular
