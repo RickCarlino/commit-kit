@@ -6,14 +6,25 @@
 
 app = angular.module('Dashboard', ['ngResource'])
 
-angular
-.module('Dashboard')
+app
+.service 'tracker', [
+  "$resource"
+  ($resource) ->
+    $resource('/api/trackers/:id',{},
+      query:
+        method: "GET"
+        isArray: true
+        transformResponse: (data, header) ->
+          angular.fromJson(data).trackers
+    )
+]
+
+app
 .controller "DashboardController", [
   '$scope'
-  '$resource'
-  ($scope, $resource) ->
-    $scope.trackers = $resource('/api/trackers/:id');
-    $scope.hello = 'world'
-    $scope.trackers.query (a) ->
-      debugger
+  'tracker'
+  ($scope, tracker) ->
+    $scope.trackers = tracker.query()
+    $scope.tracker = (new tracker).$save()
+    console.log $scope.tracker
 ]

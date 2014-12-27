@@ -1,7 +1,9 @@
 <div ng-app='Dashboard'>
   <h1>Dashboard</h1>
   <div ng-controller='DashboardController'>
-    <p>{{ hello }} </p>
+    <ul ng-repeat='t in trackers'>
+      <li> {{ t.name }} </li>
+    </ul>
   </div>
 </div>
 
