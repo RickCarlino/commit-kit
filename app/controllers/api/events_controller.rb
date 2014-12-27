@@ -5,7 +5,7 @@ module Api
     end
 
     def index
-      render json: events
+      render json: time_series_stuff
     end
 
     def destroy
@@ -24,6 +24,15 @@ private
 
     def events
       Event.where(user_id: current_user.id, tracker_id: params[:tracker_id])
+    end
+
+    def time_series_stuff
+      events
+      .group_by { |t| t.created_at.midnight.to_i }
+      .inject({}) do |accum, (k, v)|
+        accum[k] = v.count
+        accum
+      end
     end
   end
 end

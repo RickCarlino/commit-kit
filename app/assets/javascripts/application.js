@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require d3
+//= require cal-heatmap
 //= require angular
 //= require angular-resource
 //= require ng-rails-csrf
