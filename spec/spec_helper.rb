@@ -1,3 +1,5 @@
+require 'devise'
+require 'support/api_helpers'
 RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
   config.include ApiHelpers, type: :controller

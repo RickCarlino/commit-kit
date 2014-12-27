@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :tracker do
-    user nil
+    user
+    name { Faker::Name.title }
   end
 
 end

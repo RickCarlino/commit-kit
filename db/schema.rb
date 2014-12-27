@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20141227043108) do
 
   create_table "trackers", force: true do |t|
     t.integer  "user_id"
+    t.string   "name",       default: "Untitled Tracker", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

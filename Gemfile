@@ -23,5 +23,6 @@ group :development, :test do
   gem 'spring'
   gem 'sqlite3'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
