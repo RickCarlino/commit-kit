@@ -14,14 +14,13 @@ gem 'rails-assets-angular'
 gem 'rails-assets-angular-resource'
 gem 'rails-assets-cal-heatmap'
 
+
 # API STUFF ==================
 gem 'active_model_serializers'
 gem 'devise'
 gem 'mutations'
 gem 'ng-rails-csrf'
 
-# Time grouping helpers for event JSON
-gem 'groupdate'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

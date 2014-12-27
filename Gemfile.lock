@@ -58,8 +58,6 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
-    groupdate (2.3.0)
-      activesupport (>= 3)
     high_voltage (2.2.1)
     hike (1.2.3)
     i18n (0.7.0)
@@ -165,7 +163,6 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
-  groupdate
   high_voltage (~> 2.2.1)
   jquery-rails
   mutations
