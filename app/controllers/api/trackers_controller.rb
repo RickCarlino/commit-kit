@@ -2,8 +2,8 @@ module Api
   class TrackersController < Api::Controller
 
     def create
-      render json: Trackers::Create.run(user: current_user,
-                                        name: params[:tracker][:name])
+      mutate Trackers::Create.run(user: current_user,
+                                  name: params[:tracker][:name])
     end
 
     def index
@@ -11,7 +11,7 @@ module Api
     end
 
     def update
-      render json: Trackers::Update.run(update_params)
+      mutate Trackers::Update.run(update_params)
     end
 
     def destroy
