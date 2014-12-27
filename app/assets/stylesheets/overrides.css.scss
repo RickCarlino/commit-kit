@@ -1,0 +1,26 @@
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
+
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 65px; // accommodate the navbar
+  padding-right: 50px;
+  padding-left: 50px;
+
+}
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
