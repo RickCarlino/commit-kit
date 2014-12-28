@@ -1,11 +1,17 @@
 <div ng-app='Dashboard'>
+<div ng-controller='DashboardController'>
   <h1>Dashboard</h1>
-  <div ng-controller='DashboardController'>
-    <ul ng-repeat='t in trackers'>
-      <li> {{ t.name }} </li>
-    </ul>
+
+  <button class="btn" ng-click='addTracker()'>Create New Calendar</button>
+    <div ng-repeat='t in trackers'>
+      <div>
+        <h3>{{t.name}}</h3>
+        <button class="btn btn-success" ng-click='addEvent(t)'>Add Entry to Calendar '{{t.name}}'</button>
+        <button class="btn btn-danger" ng-click='removeTracker(t)'>Delete Forever</button>
+        <heatmap graph='"/api/trackers/{{t.id}}/events.json"'>
+        </heatmap>
+      </div>
+    </div>
   </div>
-  <heatmap graph='"http://localhost:3000/api/trackers/1/events.json"'>
-  </heatmap>
 </div>
 
