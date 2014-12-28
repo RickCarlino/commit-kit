@@ -75,6 +75,7 @@ GEM
       activesupport
     ng-rails-csrf (0.1.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -167,6 +168,7 @@ DEPENDENCIES
   jquery-rails
   mutations
   ng-rails-csrf
+  pg
   pry
   rails (~> 4.1.0)
   rails-assets-angular
